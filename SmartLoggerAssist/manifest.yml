@@ -1,0 +1,15 @@
+---
+declared-services:
+  Conversation-8v:
+    label: conversation
+    plan: free
+applications:
+- name: conversation-simple
+  command: npm start
+  path: .
+  memory: 256M
+  instances: 1
+  services:
+  - Conversation-8v
+  env:
+    NPM_CONFIG_PRODUCTION: false
